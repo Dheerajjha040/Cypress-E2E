@@ -17,4 +17,16 @@ describe('Login testcases', () => {
     
 
     });
+
+    it('Login to Portal as invalid user', () => {
+        
+        LoginPageObj.OpenURL()
+        LoginPageObj.enterUsername(LoginData.username)
+        LoginPageObj.enterPassword(LoginData.InvalidPassword)
+        LoginPageObj.clickLogin()
+    
+
+    });
+
+
 });

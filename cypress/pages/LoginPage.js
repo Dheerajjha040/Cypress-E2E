@@ -1,4 +1,4 @@
- export class LoginPage {
+export class LoginPage {
 
     weLocators = {
 
@@ -6,22 +6,19 @@
         password: "input[placeholder$='Password']",
         logIn: "button"
 
+
     }
 
-    OpenURL()
-    {
+    OpenURL() {
         cy.visit(Cypress.env('URL'))
     }
-    enterUsername(username)
-    {
+    enterUsername(username) {
         cy.get(this.weLocators.username).type(username)
     }
-    enterPassword(password)
-    {
+    enterPassword(password) {
         cy.get(this.weLocators.password).type(password)
     }
-    clickLogin()
-    {
+    clickLogin() {
         cy.get(this.weLocators.logIn).click()
     }
 }
