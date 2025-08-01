@@ -4,7 +4,7 @@ export class AdditionalLeasePage {
 
     webLoators = {
 
-        div_new_additional_lease_xpath: "//div[contains(text(),'New Additional Lease')]"
+        div_new_additional_lease_xpath: "//div[contains(text(),'Additional Lease')]"
 
 
     }
