@@ -1,4 +1,4 @@
-name: Regression End-to-end tests
+name: Regression End-to-end tests and HTML Report
 on: push
 jobs:
   cypress-run:
@@ -10,6 +10,12 @@ jobs:
       # and run all Cypress tests
       - name: Cypress run
         uses: cypress-io/github-action@v6
+
+      - name: Cypress test Report
+        uses: actions/upload-artifact@v4
+        with:
+            name: Mochaawesome Test Report
+            path: cypress/reports/html
 
 
 
