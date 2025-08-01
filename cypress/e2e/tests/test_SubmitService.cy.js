@@ -18,7 +18,7 @@ describe('HomePageTestcases', () => {
 
         homepage.navigate_CompanyservicesPage()
         csp.navigate_AddtionalLicenseServicePage()
-        cy.xpath(alp.webLoators.div_new_additional_lease_xpath).should('be.hidden')
+        cy.xpath(alp.webLoators.div_new_additional_lease_xpath).should('be.visible')
 
 
 
