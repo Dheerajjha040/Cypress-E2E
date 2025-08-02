@@ -29,8 +29,6 @@ describe('HomePageTestcases', () => {
         alp.verify_ThankYouVisible()
         cy.log("request id: ", alp.save_DAFZid )
         
-    
-
     });
 
 

@@ -1,6 +1,5 @@
-import { text } from "stream/consumers";
 
-
+import 'cypress-wait-until';
 export class AdditionalLeasePage {
 
 
@@ -50,7 +49,8 @@ export class AdditionalLeasePage {
     }
     verify_ThankYouVisible()
     {
-        cy.xpath(this.webLocators.label_ThankYou).should('be.visible')
+        cy.waitUntil(() => cy.xpath(this.webLocators.label_ThankYou));
+        cy.xpath(this.webLocators.label_ThankYou).should('be.visible');
     }
     save_DAFZid()
     {
