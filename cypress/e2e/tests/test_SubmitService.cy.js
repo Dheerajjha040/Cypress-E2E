@@ -20,12 +20,16 @@ describe('HomePageTestcases', () => {
 
         homepage.navigate_CompanyservicesPage()
         csp.navigate_AddtionalLicenseServicePage()
-        cy.xpath(alp.webLoators.div_new_additional_lease_xpath).should('be.visible')
+        alp.verify_additionalLeasePageVisible()
         alp.enter_Submitted_User_Designation(leasedata.designation)
         alp.enter_area(leasedata.area)
         alp.select_typeOfProperty(LoginData.TypeofProperty)
         alp.enter_comments(leasedata.comments)
         alp.click_submit()
+        alp.verify_ThankYouVisible()
+        cy.log("request id: ", alp.save_DAFZid )
+        
+    
 
     });
 
