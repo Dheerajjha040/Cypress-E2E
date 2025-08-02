@@ -2,9 +2,9 @@
 import { AdditionalLeasePage } from "../../pages/AdditonalLeasePage";
 import { CompanyServicesPage } from "../../pages/CompanyServicesPage";
 import { HomePage } from "../../pages/HomePage";
-import {LoginData} from "../../fixtures/LoginData.json"
-import "../../support/commands"
-import { generateFakeleasedata } from '../../support/fakerAdditionallease'
+import LoginData from "../../fixtures/LoginData.json";
+import "../../support/commands";
+import { generateFakeleasedata } from '../../support/fakerAdditionallease';
 
 const homepage = new HomePage()
 const csp = new CompanyServicesPage()

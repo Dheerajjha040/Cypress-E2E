@@ -1,5 +1,4 @@
-import { title } from "process"
-import LoginData from "../../fixtures/LoginData.json"
+
 
 export class AdditionalLeasePage {
 
@@ -10,14 +9,11 @@ export class AdditionalLeasePage {
         input_submitted_user_designation_xpath: "//input[@name='Submitted User Designation']",
         input_area_xpath: "//input[@name='Area']",
         textarea_comments_xpath: "//textarea[@name='Comments']",
-        button_submit_xpath: "//button[@title='SUBMIT']"
+        button_submit_xpath: "//button[@title='SUBMIT']",
+        select_typeOfProperty: "//span[contains(text(),'Type of Property')]//..//..//select"
 
     }
-
-    getTypeOfPropertyXPath(property) {
-        return "//span[contains(text(),'Type of Property')]//..//..//select/option[text()='${property}']";
-    }
-
+    
     verify_additionalLeasePage() {
         return cy.xpath(this.webLoators.div_new_additional_lease_xpath).invoke(text)
     }
@@ -33,8 +29,8 @@ export class AdditionalLeasePage {
     }
 
     select_typeOfProperty(property) {
-        const xpath = this.getTypeOfPropertyXPath(property);
-        cy.xpath(xpath).click();
+        // Assuming you have a fixed locator to the <select> tag itself
+        cy.xpath(this.webLoators.select_typeOfProperty).select(property);
     }
 
     enter_comments(comment)
