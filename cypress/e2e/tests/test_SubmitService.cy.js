@@ -2,9 +2,9 @@
 import { AdditionalLeasePage } from "../../pages/AdditonalLeasePage";
 import { CompanyServicesPage } from "../../pages/CompanyServicesPage";
 import { HomePage } from "../../pages/HomePage";
-import LoginData from "../../fixtures/LoginData.json"
+import {LoginData} from "../../fixtures/LoginData.json"
 import "../../support/commands"
-import { generateFakeleasedata } from '../support/fakerAdditionallease';
+import { generateFakeleasedata } from '../../support/fakerAdditionallease'
 
 const homepage = new HomePage()
 const csp = new CompanyServicesPage()
@@ -26,11 +26,6 @@ describe('HomePageTestcases', () => {
         alp.select_typeOfProperty(LoginData.TypeofProperty)
         alp.enter_comments(leasedata.comments)
         alp.click_submit()
-
-
-
-
-
 
     });
 
